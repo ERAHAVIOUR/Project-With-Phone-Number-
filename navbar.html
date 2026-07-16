@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        #search {
+            height: 40px;
+            width: 150px;
+            border: 1.5px solid skyblue;
+            color: blue;
+            background-color: transparent;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .search {
+            position: absolute;
+            top: 70px;
+            display: none;
+            background-color: white;
+
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 150px;
+            padding: 0px 0px 10px 10px;
+
+        }
+
+        .show {
+            display: block;
+        }
+
+        .search li {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .search li a {
+            text-decoration: none;
+        }
+
+        .search h3 {
+            margin-top: 10px;
+        }
+
+        #works {
+            height: 40px;
+            width: 150px;
+            border: none;
+            background-color: transparent;
+            border-right: 0.5px solid black;
+        }
+
+        #works:hover {
+            color: orangered
+        }
+
+        .btn_log {
+            border: none;
+
+        }
+
+        .btn_log:hover {
+            color: orangered
+        }
+
+        #freelancer a {
+            text-decoration: none;
+            color: orangered
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2>
+            <img src="pph.png" alt="" width="200px">
+
+        </h2>
+        <div class="nav">
+            <button id="search"><i class="fa-solid fa-magnifying-glass"></i> SEARCH <i
+                    class="fa-solid fa-chevron-down"></i></button>
+            <ul class="search">
+                <h3>Buyers Can</h3>
+                <li>
+                    <a href="#">Search Offers</a>
+                    <p>to buy now</p>
+                </li>
+                <li>
+                    <a href="#">Seacrh Freelancers</a>
+                    <p>to request a proposal</p>
+                </li>
+                <h3>Freelancer Can</h3>
+                <li>
+                    <a href="#">Search Projects</a>
+                    <p>to quote on</p>
+                </li>
+
+            </ul>
+            <button id="works">HOW IT WORKS</button>
+
+            <button class="btn_log">LOG IN</button>
+            <button class="btn_log">SIGN UP</button>
+            <p id="freelancer"><a href="#">Freelancer ?</a></p>
+
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#search")
+        let items = document.querySelector(".search")
+        btn.addEventListener("click", () => {
+            items.classList.toggle("show")
+        })
+    </script>
+</body>
+
+</html>

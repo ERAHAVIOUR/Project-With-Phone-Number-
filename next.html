@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-image: url(projects.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            user-select: none;
+        }
+
+        .projects {
+
+
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #login_projects {
+            width: 250px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            background-color: orangered;
+            cursor: grabbing;
+        }
+
+        #login_projects a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #login_projects:hover {
+            background-color: violet;
+        }
+
+        #nav_projects {
+            width: 250px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            background-color: violet;
+            cursor: grabbing;
+        }
+
+        #nav_projects a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #nav_projects:hover {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="projects">
+        <button id="login_projects"><a href="login.html">Click To Get Login Project</a></button>
+        <button id="nav_projects"><a href="navbar.html">Click To Get Navbar Project</a></button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(window.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            user-select: none;
+        }
+
+
+        .window img {
+            border-radius: 50%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .pass {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+            width: 300px;
+            height: 80px;
+
+        }
+
+        .pass input {
+
+            width: 200px;
+            height: 40px;
+            border: none;
+            font-size: 20px;
+            border: 4px solid palevioletred;
+            border-radius: 7px;
+            text-align: center;
+            background-color: transparent;
+            outline-color: firebrick;
+
+        }
+
+        .fa-arrow-right {
+            color: darkviolet;
+            font-size: 40px;
+            padding-left: 10px;
+            cursor: pointer;
+        }
+
+        .fa-eye {
+
+            box-sizing: border-box;
+            position: absolute;
+            margin-left: 120px;
+            color: purple;
+
+        }
+
+        .fa-eye-slash {
+            box-sizing: border-box;
+            position: absolute;
+            margin-left: 120px;
+            color: darkorchid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <img src="subham.png" alt="" width="200px" height="200px">
+    </div><br>
+    <div class="pass">
+        <input type="password" maxlength="10">
+        <i class="fa-solid fa-eye"></i>
+
+        <i class="fa-solid fa-arrow-right"></i>
+    </div>
+    <script>
+        let eye = document.querySelector(" .fa-eye")
+        let clic = document.querySelector(".fa-arrow-right")
+        let input = document.querySelector("input")
+        clic.addEventListener("click", () => {
+            let value = input.value
+            let correct = "6230347515"
+
+            if (value === correct) {
+                window.location.href = "next.html"
+            }
+            else if (value === "") {
+                alert("Please Enter Password")
+            }
+            else {
+                alert("wrong password")
+            }
+        })
+
+        input.addEventListener("keydown", (press) => {
+            if (press.key === "Enter") {
+                clic.click()
+            }
+        })
+
+        eye.addEventListener("click", () => {
+            if (input.type === "password") {
+                input.type = "text"
+                eye.classList.remove("fa-eye")
+                eye.classList.add("fa-eye-slash")
+            }
+            else {
+                input.type = "password"
+                eye.classList.add("fa-eye")
+                eye.classList.remove("fa-eye-slash")
+            }
+        })
+
+        document.addEventListener("keydown", (altwali) => {
+            if (altwali.altKey && altwali.key === "F8") {
+                input.type = "text"
+            }
+        })
+
+        document.addEventListener("keyup", (leave) => {
+            if (leave.altKey || leave.key === "F*") {
+                input.type = "password"
+            }
+        })
+    </script>
+</body>
+
+</html>

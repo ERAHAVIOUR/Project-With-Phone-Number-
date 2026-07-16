@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeoplePerHour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            height: auto;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            user-select: none;
+        }
+
+        .contain {
+            width: 400px;
+            height: 700px;
+            border-radius: 5px;
+            background-color: linen;
+            border: 1px solid orangered;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #signup {
+            border: none;
+            background-color: transparent;
+            color: orangered;
+            cursor: pointer;
+        }
+
+        .signup {
+            display: flex;
+            gap: 6px;
+            justify-self: center;
+            align-items: center;
+        }
+
+        .continue {
+            height: 40px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .continue a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .continue a i {
+            margin-right: 5px;
+        }
+
+        #continue1 {
+            background-color: mediumblue;
+
+        }
+
+        #continue2 {
+            background-color: midnightblue;
+
+        }
+
+        #continue3 {
+            background-color: mediumblue;
+
+        }
+
+        #continue4 {
+            background-color: black;
+
+        }
+
+        .line {
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .line::before,
+        .line::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid orangered;
+        }
+
+        .line span {
+            padding: 0 5px;
+        }
+
+        .remember {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .remember p {
+            margin-left: 25px;
+        }
+
+        .enterlog {
+            width: 250px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            outline-color: orangered;
+
+        }
+
+        input[type="checkbox"] {
+            accent-color: orangered;
+        }
+
+        #login {
+
+            width: 200px;
+            height: 30px;
+            border: none;
+            background-color: orangered;
+            color: white;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <h2>Log In</h2>
+        <div class="signup">
+            <p>Don't have an account ?</p>
+            <button id="signup">Sign Up</button>
+        </div>
+
+        <p class="continue" id="continue1"><a href="#"><i class="fa-brands fa-google"></i> Contniue With Google</a></p>
+        <p class="continue" id="continue2"><a href="#"><i class="fa-brands fa-facebook"></i> Contniue With Facebook</a>
+        </p>
+        <p class="continue" id="continue3"><a href="#"><i class="fa-brands fa-linkedin"></i> Contniue With linkedin</a>
+        </p>
+        <p class="continue" id="continue4"><a href="#"><i class="fa-brands fa-apple"></i> Contniue With Apple</a></p>
+
+        <div class="line">
+            <span>or</span>
+        </div>
+
+        <div class="login">
+            <p>EMAIL</p>
+            <input type="email" class="enterlog">
+        </div>
+
+        <div class="login">
+            <p>PASSWORD</p>
+            <input type="password" class="enterlog">
+        </div>
+
+        <div class="remember">
+            <label for="remember">
+                <input type="checkbox" name="" id="remember">Remember Me
+            </label>
+            <p>Forget password ?</p>
+        </div>
+
+        <button id="login">LOG IN</button>
+    </div>
+</body>
+
+</html>
